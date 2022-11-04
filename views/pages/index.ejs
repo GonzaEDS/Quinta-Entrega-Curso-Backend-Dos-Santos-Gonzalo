@@ -17,7 +17,6 @@
         border-radius: 1rem;
       }
       body {
-        background: #da8e5f;
         max-width: 100vw;
         background-image: url(https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png);
         background-size: cover;
@@ -67,6 +66,14 @@
           text-align: center;
         }
       }
+      @media only screen and (max-width: 400px) {
+        table,
+        tr,
+        th,
+        td {
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -82,35 +89,31 @@
             action="products"
           >
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <label for="name-input" class="form-label">Name</label>
               <input
                 type="text"
                 name="name"
                 class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="name-input"
+                aria-describedby="nameInput"
               />
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Price</label
-              >
+              <label for="price-input" class="form-label">Price</label>
               <input
                 type="text"
                 name="price"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="price-input"
               />
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Thumbnail</label
-              >
+              <label for="thumbnail-input" class="form-label">Thumbnail</label>
               <input
                 type="text"
                 name="thumbnail"
                 class="form-control"
-                id="exampleInputPassword2"
+                id="thumbnail-input"
               />
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
