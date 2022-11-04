@@ -18,7 +18,7 @@ router.get('/', async (_req, res) => {
   try {
     let data = await products.getAll()
     if (data) {
-      res.render('pages/index', { data })
+      res.render('pages/index', { data, page: 'table', title: 'Products view' })
     } else {
       res.status(404).json({
         response: 'can not find'
@@ -38,7 +38,11 @@ router.get('/random', async (_req, res) => {
     data.push(await products.getOne())
 
     if (data) {
-      res.status(200).send(data)
+      res.render('pages/index', {
+        data,
+        page: 'table',
+        title: 'Random product'
+      })
     } else {
       res.status(404).json({
         response: 'can not find'
